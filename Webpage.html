@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <link rel="stylesheet" type="text/css" href="PortfolioStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"
@@ -20,7 +20,6 @@
 
     <div id="navbar">
         <ul>
-            <!-- <li><a href=javascript:topFunction()>Home</a></li> -->
             <li><a href="#aboutSection">About</a></li>
             <li><a href="#skillsSection">Skills</a></li>
             <li><a href="#contactSection">Contact</a></li>
@@ -30,14 +29,14 @@
 
     <div id="mobilenav">
         <div class="mobileTopNav">
-            <a href="#aboutSection">Johan van der Merwe</a>
+            <a>Johan van der Merwe</a>
             <div id="myLinks">
                 <a href="#aboutSection"> About</a>
                 <a href="#skillsSection">Skills</a>
                 <a href="#contactSection"> Contact</a>
                 <a href="#someLinks"> Links</a>
             </div>
-            <a href="javascript:void(0);" class="icon" onclick="mobileTopNav()"><i class="fa fa-bars"></i>
+            <a class="icon" onclick="mobileTopNav()"><i class="fa fa-bars"></i>
             </a>
         </div>
     </div>
@@ -45,12 +44,23 @@
     <div class="content">
         <div id="aboutSection" class="spacer"></div>
         <h2>About</h2>
-        <p>
-            I finnished High School in 2018 and I am currently an intern at Younglings Africa. I am interested in
-            graphics design and software development, coding taking the top of my interests. I am actively working to
-            further my skills in software development and graphics design. In my spare time a play video games and watch
-            streams on twitch.
-        </p>
+        <div class="containerA">
+            <span>
+                <img src="ProfilePic1.png">
+            </span>
+            <span>
+                <p>
+                    I finished High School in 2018 and I am currently an intern at Younglings Africa. I am interested in
+                    graphics design and software development, coding taking the top of my interests. I am actively
+                    working
+                    to
+                    further my skills in software development and graphics design. In my spare time a play video games
+                    and
+                    watch
+                    streams on twitch.
+                </p>
+            </span>
+        </div>
         <div id="skillsSection" class="spacer"></div>
 
         <h2>Skills</h2>
@@ -66,7 +76,7 @@
             <span>
                 <p>
                     In High School I learned delphi and afterwards I took a seperate course to learn Java and Python. I
-                    am a self taught in GIMP and web development(HTMl,CSS and JS).
+                    am a self taught in GIMP and web development (HTMl,CSS and JS).
                 </p>
             </span>
         </div>
@@ -79,38 +89,33 @@
                 <i id="cl4" class="devicon-css3-plain colored"></i>
                 <i id="cl2" class="devicon-javascript-plain"></i>
                 <i id="cl3" class="devicon-gimp-plain"></i>
-
             </div>
-
             <span>
                 <p>
-                    In High Schoolhghfadghfgasgfafsaj I learned delphi and afterwards I took a seperate course to learn
-                    Java and Python. I
-                    am a self taught in GIMP and web development(HTMl,CSS and JS).
+                    In High School I learned delphi and afterwards I took a seperate course to learn
+                    Java and Python. I am a self taught in GIMP and web development (HTMl,CSS and JS).
                 </p>
             </span>
         </div>
 
-        <div class="spacer"></div>
+        <div id="contactSection" class="spacer"></div>
 
-        <h2 id="contactSection">Contact</h2>
+        <h2>Contact</h2>
         <form class="cForm">
-            <label for="fname"> Name </label>
-            <input type="text" id="fname" name="fname" placeholder="Enter your full name">
+            <label for="fname"> Name </label><br>
+            <input type="text" id="fname" name="fname" placeholder="Enter your full name"><br>
+            <label for="femail"> Email</label><br>
+            <input type="email" id="femail" name="femail" placeholder="Enter email"><br>
 
-            <label for="femail"> Email</label>
-            <input type="email" id="femail" name="femail" placeholder="Enter email">
-
-            <label for="fmessage"> Message</label>
-            <textarea id="subject" name="fmessage" placeholder="Write a message""></textarea>
+            <label for="fmessage"> Message</label><br>
+            <textarea id="subject" name="fmessage" placeholder="Write a message""></textarea><br>
                 <button> submit </button>
             </form>
-<!-- https://icongr.am/devicon/{icon}.svg?size={number}&color={hex} -->
             <div class=" spacer"></div>
             <h2 id="someLinks">Some links of mine</h2>
             <div id="linksAl" class="linkies">
-                    <a href=""><img src="LinkedIn.png"></a>
-                    <a href=""><img src="GitHub.png"></a>
+                    <a href="https://www.linkedin.com/in/johan-van-der-merwe-25a3b018b"target="_blank"><img src="LinkedIn.png"></a>
+                    <a href="https://github.com/AppelKoos"target="_blank"><img src="GitHub.png"></a>
             </div>
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="/__/firebase/6.3.0/firebase-app.js"></script> 
@@ -120,8 +125,7 @@
 
         <!-- Initialize Firebase -->
         <script src="/__/firebase/init.js"></script>
-        
-        <script src="SuperCoolJS.js"></script>
+        <script src="Script.js"></script>
     </body>
     
 </html>
