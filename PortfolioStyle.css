@@ -1,0 +1,278 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body,
+html {
+	/* overflow: hidden; */
+	height: 100%;
+	width: 100%;
+	font-family: 'Segoe UI';
+}
+html {
+	scroll-behavior: smooth;
+	background: url("Bckgrnd.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+body {
+	
+}
+/* Header things */
+.header {
+	background-color: #7b3237;
+	opacity: 0.8;
+	width: 100%;
+	height: 91%;
+	text-align: center;
+}
+.titleTop {
+	position: relative;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #f6e418;
+}
+.titleTop h1 {
+	font-size: 70px;
+}
+.titleTop h2 {
+	font-size: 50px;
+}
+/* mobile topnav */
+#mobilenav {
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
+.mobileTopNav {
+	overflow: hidden;
+	background-color: #7b3237;
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
+.mobileTopNav #myLinks {
+	display: none;
+}
+.mobileTopNav a {
+	background-color: #7b3237;
+	color: #f6e418;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 34px;
+	display: block;
+}
+.mobileTopNav a.icon {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.mobileTopNav a:hover {
+	background-color: #92253a;
+	color: #f6e418;
+}
+.mobileTopNav {
+	display: none;
+}
+
+/* Everything navbar in css portion */
+#navbar {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	list-style: none;
+	overflow: hidden;
+	background-color: #7b3237;
+}
+#navbar li {
+	float: left;
+	display: inline-block;
+	width: 25%;
+	font-size: 30px;
+}
+
+#navbar a {
+	display: block;
+	color: #f6e418;
+	text-align: center;
+	padding: 20px;
+	text-decoration: none;
+}
+#navbar a:hover {
+	transition: 0.5s;
+	background-color: #92253a;
+	color: #f6e418;
+}
+.content {
+	padding-top: 16px;
+}
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.sticky + .content {
+	padding-top: 60px;
+}
+
+/* Content div (all the abouts, skills and contacts) */
+.spacer {
+	padding-top: 14%;
+}
+.container {
+	display: table;
+}
+.container span {
+	width: 10%;
+	height: 20%;
+	vertical-align: middle;
+	display: table-cell;
+
+}
+.container p {
+	font-size: 34px;
+	color: #f6e418;
+}
+.container i {
+	color: #ffd845;
+	font-size: 150px;
+	padding: 20px;
+}
+#cl1 {
+	color: #3d8fc6;
+	font-size: 150px;
+}
+#cl2 {
+	color: #e54d26;
+	font-size: 150px;
+}
+#cl3 {
+	color: #f6e418;
+	font-size: 150px;
+}
+#cl4{
+	font-size: 150px;
+}
+#mobileskills{
+	display: none;
+}
+#tableicons{
+	text-align: center;
+}
+.content {
+	width: 70%;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 3%;
+	padding-right: 3%;
+	padding-bottom: 5%;
+	background: rgb(116, 50, 55);
+	background: rgba(116, 50, 55, 0.6);
+}
+
+.content h2 {
+	text-align: center;
+	font-size: 40px;
+	color: #f6e418;
+}
+.content p {
+	padding-top: 5%;
+	opacity: 1;
+	font-size: 34px;
+	color: #f6e418;
+}
+
+.linkies img{
+	width: 100px;
+	height: 100px;
+}
+
+#linksAl{
+text-align: center;
+}
+
+.content a{
+	color: white;
+}
+
+.content i{
+	font-size: 70px;
+}
+/* forms */
+.cForm {
+	height: 60%;
+}
+.cForm label {
+	font-size: 25px;
+	color: #f6e418;
+}
+.cForm input {
+	width: 100%;
+	padding: 10px 10px;
+	margin: 2px 0;
+	box-sizing: border-box;
+	font-size: 24px;
+}
+.cForm textarea {
+	width: 100%;
+	font-size: 24px;
+	box-sizing: border-box;
+	height: 20%;
+}
+.cForm button {
+	margin-top: 10px;
+	font-size: 25px;
+	background-color: #7b3237;
+	color: #f6e418;
+	text-align: center;
+	border: none;
+	display: inline-block;
+	padding: 12px;
+}
+
+/* for fones */
+@media (max-width: 1090px) {
+	.body {
+		font-size: 3rem;
+	}
+	.header {
+		display: none;
+	}
+
+	.titleTop {
+		display: none;
+	}
+
+	#navbar {
+		display: none;
+	}
+
+	.mobileTopNav {
+		display: contents;
+	}
+
+	.content {
+		width: auto;
+		height: auto;
+	}
+
+	#mobileskills{
+		display: contents;
+	}
+	#desktopskills{
+		display: none;
+	}
+	.content p {
+		font-size: 3em;
+	}
+	.cForm {
+		font-size: 3em;
+	}
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="PortfolioStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="https://icongr.am/devicon/{icon}.svg?size={number}&color={hex}">
+</head>
+
+<body>
+    <div class="header">
+        <div class="titleTop">
+            <h1>Johan van der Merwe</h1>
+            <h2>Software Developer</h2>
+        </div>
+    </div>
+
+    <div id="navbar">
+        <ul>
+            <!-- <li><a href=javascript:topFunction()>Home</a></li> -->
+            <li><a href="#aboutSection">About</a></li>
+            <li><a href="#skillsSection">Skills</a></li>
+            <li><a href="#contactSection">Contact</a></li>
+            <li><a href="#someLinks">Links</a></li>
+        </ul>
+    </div>
+
+    <div id="mobilenav">
+        <div class="mobileTopNav">
+            <a href="#aboutSection">Johan van der Merwe</a>
+            <div id="myLinks">
+                <a href="#aboutSection"> About</a>
+                <a href="#skillsSection">Skills</a>
+                <a href="#contactSection"> Contact</a>
+                <a href="#someLinks"> Links</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="mobileTopNav()"><i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div id="aboutSection" class="spacer"></div>
+        <h2>About</h2>
+        <p>
+            I finnished High School in 2018 and I am currently an intern at Younglings Africa. I am interested in
+            graphics design and software development, coding taking the top of my interests. I am actively working to
+            further my skills in software development and graphics design. In my spare time a play video games and watch
+            streams on twitch.
+        </p>
+        <div id="skillsSection" class="spacer"></div>
+
+        <h2>Skills</h2>
+        <div id="desktopskills" class="container">
+            <span>
+                <i id="cl3" class="devicon-java-plain-wordmark"></i>
+                <i id="cl1" class="devicon-python-plain-wordmark colored"></i>
+                <i id="cl4" class="devicon-css3-plain colored"></i>
+                <i id="cl4" class="devicon-html5-plain colored"></i>
+                <i id="cl2" class="devicon-javascript-plain"></i>
+                <i id="cl3" class="devicon-gimp-plain"></i>
+            </span>
+            <span>
+                <p>
+                    In High School I learned delphi and afterwards I took a seperate course to learn Java and Python. I
+                    am a self taught in GIMP and web development(HTMl,CSS and JS).
+                </p>
+            </span>
+        </div>
+
+        <div id="mobileskills" class="container">
+            <div id="tableicons">
+                <i id="cl3" class="devicon-java-plain-wordmark"></i>
+                <i id="cl1" class="devicon-python-plain-wordmark colored"></i>
+                <i id="cl4" class="devicon-html5-plain colored"></i>
+                <i id="cl4" class="devicon-css3-plain colored"></i>
+                <i id="cl2" class="devicon-javascript-plain"></i>
+                <i id="cl3" class="devicon-gimp-plain"></i>
+
+            </div>
+
+            <span>
+                <p>
+                    In High Schoolhghfadghfgasgfafsaj I learned delphi and afterwards I took a seperate course to learn
+                    Java and Python. I
+                    am a self taught in GIMP and web development(HTMl,CSS and JS).
+                </p>
+            </span>
+        </div>
+
+        <div class="spacer"></div>
+
+        <h2 id="contactSection">Contact</h2>
+        <form class="cForm">
+            <label for="fname"> Name </label>
+            <input type="text" id="fname" name="fname" placeholder="Enter your full name">
+
+            <label for="femail"> Email</label>
+            <input type="email" id="femail" name="femail" placeholder="Enter email">
+
+            <label for="fmessage"> Message</label>
+            <textarea id="subject" name="fmessage" placeholder="Write a message""></textarea>
+                <button> submit </button>
+            </form>
+<!-- https://icongr.am/devicon/{icon}.svg?size={number}&color={hex} -->
+            <div class=" spacer"></div>
+            <h2 id="someLinks">Some links of mine</h2>
+            <div id="linksAl" class="linkies">
+                    <a href=""><img src="LinkedIn.png"></a>
+                    <a href=""><img src="GitHub.png"></a>
+            </div>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="/__/firebase/6.3.0/firebase-app.js"></script> 
+
+            <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#reserved-urls -->
+
+        <!-- Initialize Firebase -->
+        <script src="/__/firebase/init.js"></script>
+        
+        <script src="SuperCoolJS.js"></script>
+    </body>
+    
+</html>
