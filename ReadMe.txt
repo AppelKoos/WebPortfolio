@@ -1,0 +1,1 @@
+Site is hosted on firebase and the code to the cloud functions are not going to be in this repository
