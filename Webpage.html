@@ -2,12 +2,23 @@
 <html>
 
 <head>
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-    <link rel="stylesheet" type="text/css" href="PortfolioStyle.css">
+    <link rel="stylesheet" type="text/css" href="Styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"
         href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="https://icongr.am/devicon/{icon}.svg?size={number}&color={hex}">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript">
+        function dataCallback(response) {
+            // console.log("dataCallback", response)
+            window.location.href = "/checkRecaptcha?response=" + encodeURIComponent(response)
+        }
+        function dataExpiredCallback() {
+            // console.log("dataExpiredCallback")
+        }
+    </script>
+
 </head>
 
 <body>
@@ -101,31 +112,40 @@
         <div id="contactSection" class="spacer"></div>
 
         <h2>Contact</h2>
-        <form class="cForm">
-            <label for="fname"> Name </label><br>
-            <input type="text" id="fname" name="fname" placeholder="Enter your full name"><br>
-            <label for="femail"> Email</label><br>
-            <input type="email" id="femail" name="femail" placeholder="Enter email"><br>
+        <form id="contactForm" class="cForm">
+            <label> Name </label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your full name"><br>
+            <label> Email</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter email"><br>
 
-            <label for="fmessage"> Message</label><br>
-            <textarea id="subject" name="fmessage" placeholder="Write a message""></textarea><br>
-                <button> submit </button>
-            </form>
-            <div class=" spacer"></div>
-            <h2 id="someLinks">Some links of mine</h2>
-            <div id="linksAl" class="linkies">
-                    <a href="https://www.linkedin.com/in/johan-van-der-merwe-25a3b018b"target="_blank"><img src="LinkedIn.png"></a>
-                    <a href="https://github.com/AppelKoos"target="_blank"><img src="GitHub.png"></a>
-            </div>
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="/__/firebase/6.3.0/firebase-app.js"></script> 
+            <label> Message </label><br>
+            <textarea id="message" name="message" placeholder="Write a message"></textarea><br>
 
-            <!-- TODO: Add SDKs for Firebase products that you want to use
-            https://firebase.google.com/docs/web/setup#reserved-urls -->
+            <div id="recaptcha" class="g-recaptcha" data-sitekey="6Lc8brAUAAAAAHveZiA9vbk5yghVM9PtnfLhZNsr"
+                data-callback="dataCallback" data-expired-callback="dataExpiredCallback"></div>
+            <br />
 
-        <!-- Initialize Firebase -->
-        <script src="/__/firebase/init.js"></script>
+            <button onclick()=> submit </button>
+
+        </form>
+
+        <div class=" spacer"></div>
+
+        <h2 id="someLinks">Some links of mine</h2>
+        <div id="linksAl" class="linkies">
+            <a href="https://www.linkedin.com/in/johan-van-der-merwe-25a3b018b" target="_blank"><img
+                    src="LinkedIn.png"></a>
+            <a href="https://github.com/AppelKoos" target="_blank"><img src="GitHub.png"></a>
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-functions.js"></script>
+        <!-- <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-request-promise.js"></script> -->
+        <script src="Mail.js"></script>
         <script src="Script.js"></script>
-    </body>
-    
+
+</body>
+
 </html>
