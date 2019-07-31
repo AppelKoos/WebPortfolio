@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <link rel="stylesheet" type="text/css" href="PortfolioStyles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"
         href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
@@ -12,7 +12,7 @@
     <script type="text/javascript">
         function dataCallback(response) {
             // console.log("dataCallback", response)
-            window.location.href = "/checkRecaptcha?response=" + encodeURIComponent(response)
+            var resp = "/checkRecaptcha?response=" + encodeURIComponent(response)
         }
         function dataExpiredCallback() {
             // console.log("dataExpiredCallback")
@@ -121,11 +121,12 @@
             <label> Message </label><br>
             <textarea id="message" name="message" placeholder="Write a message"></textarea><br>
 
-            <div id="recaptcha" class="g-recaptcha" data-sitekey="6Lc8brAUAAAAAHveZiA9vbk5yghVM9PtnfLhZNsr"
-                data-callback="dataCallback" data-expired-callback="dataExpiredCallback"></div>
+            <div id="recaptcha" class="g-recaptcha" data-sitekey="SITE_KEY"
+                data-callback="dataCallback" data-expired-callback="dataExpiredCallback">
+            </div>
             <br />
 
-            <button onclick()=> submit </button>
+            <button id="submitbtn"> submit </button>
 
         </form>
 
@@ -142,9 +143,9 @@
         <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
         <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-functions.js"></script>
-        <!-- <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-request-promise.js"></script> -->
         <script src="Mail.js"></script>
-        <script src="Script.js"></script>
+        <script src="SupercoolJS.js"></script>
+        <!-- <script src="Script.js"></script> -->
 
 </body>
 

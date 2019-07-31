@@ -1,20 +1,17 @@
-
 window.onscroll = function () { myFunction() };
-
+window.onload = document.getElementById("submitbtn").disabled = false;
 
 var navbar = document.getElementById('navbar');
 var sticky = navbar.offsetTop;
 //Sticky nav
 function myFunction() {
-	console.log('You is scrolling');
+	// console.log('You is scrolling');
 	if (window.pageYOffset >= sticky) {
 		navbar.classList.add('sticky');
 	} else {
 		navbar.classList.remove('sticky');
 	}
 }
-
-
 // mobile nav right button
 function mobileTopNav() {
 	var x = document.getElementById('myLinks');
@@ -24,4 +21,8 @@ function mobileTopNav() {
 		x.style.display = 'block';
 	}
 }
+// var btn = document.getElementById('submtbtn');
 
+function disableBtn() {
+	document.getElementById("submitbtn").disabled = true;
+}

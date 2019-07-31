@@ -26,6 +26,10 @@ function submitForm(e) {
     var email = getInputVal('email');
     var message = getInputVal('message');
 
+    if (name === '' || email === '' || message === '') {
+        return alert('some fields are empty');
+    }
+
     // save message
     saveMessage(name, email, message);
     console.log("message sent from mail.js");
